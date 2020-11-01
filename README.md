@@ -11,7 +11,7 @@ A text-based rpg
     * Attack
     * Magic spells?
     * Health Potions
-   * System
+  * System
     * Hero can leave or fight
 * Plot
   * Write an actual story
