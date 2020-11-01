@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Game {
 
@@ -24,17 +27,29 @@ public class Game {
         }
     }
 
+    private static void checkAdventurer() {
+        try {
+            String file = Files.readString(Paths.get("../data/Characters.txt"));
+            System.out.println(file);
+        } catch (IOException e) {
+            System.out.println("Error, files are missing, please reinstall");
+        }
+    }
+
     private static void startMenu() {
         System.out.println("=======================================================");
         System.out.println("Welcome to the Text Dungeon, what would you like to do?");
         System.out.println("0. Enter the Dungeon");
-        System.out.println("1. Exit");
+        System.out.println("1. Create an Adventurer");
+        System.out.println("2. Exit");
         System.out.println("=======================================================");
         int in = takeInput(1);
         if(in == 0) {
             System.out.println("Godspeed adventurer");
             enterDungeon();
         } else if(in == 1) {
+
+        } else if(in == 2) {
             System.out.println("Farewell adventurer, may you return one day...");
             gameRunning = false;
         }
@@ -44,9 +59,10 @@ public class Game {
         
     }
     public static void main(String[] args) {
-        while (gameRunning) {
-            startMenu();
-        }
+    //     while (gameRunning) {
+    //         startMenu();
+    //     }
+        checkAdventurer();
     }
 
 }
