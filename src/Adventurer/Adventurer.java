@@ -45,26 +45,37 @@ public class Adventurer {
         return currentPotions;
     }
 
-    public void increaseHealth(int n) {
+    public void increaseMaxHealth(int n) {
         health += n;
     }
 
-    public void increaseAttack(int n) {
+    public void increaseMaxAttack(int n) {
         attack += n;
     }
 
     public void increaseExp(int n) {
         exp += n;
+        if(currentExp >= exp)
+            levelUp();
     }
 
-    public void increasePotions(int n) {
+    public void increaseMaxExp(int n) {
+        exp += n;
+    }
+
+    public void increaseMaxPotions(int n) {
         potions += n;
     }
 
     public void levelUp() {
-        increaseHealth(5);
-        increaseAttack(5);
-        increaseExp(5);
+        increaseMaxHealth(5);
+        increaseMaxAttack(5);
+        increaseMaxExp(5);
+        currentExp = 0;
+    }
+
+    public void usePotion() {
+        currentHealth = health;
     }
 
 }
