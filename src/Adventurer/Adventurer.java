@@ -45,4 +45,26 @@ public class Adventurer {
         return currentPotions;
     }
 
+    public void increaseHealth(int n) {
+        health += n;
+    }
+
+    public void increaseAttack(int n) {
+        attack += n;
+    }
+
+    public void increaseExp(int n) {
+        exp += n;
+    }
+
+    public void increasePotions(int n) {
+        potions += n;
+    }
+
+    public void levelUp() {
+        increaseHealth(5);
+        increaseAttack(5);
+        increaseExp(5);
+    }
+
 }
