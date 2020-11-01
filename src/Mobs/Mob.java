@@ -12,15 +12,15 @@ public class Mob {
         this. exp = exp;
     }
 
-    private int getAttack() {
+    public int getAttack() {
         return attack;
     }
 
-    private int getHealth() {
+    public int getHealth() {
         return health;
     }
 
-    private int getExp() {
+    public int getExp() {
         return exp;
     }
 
