@@ -2,15 +2,21 @@ package Adventurer;
 
 public class Adventurer {
     
+    private String name;
     private int health, currentHealth;
     private int attack, currentAttack;
     private int exp = 20;
     private int currentExp = 0;
     private int potions, currentPotions = 3;
 
-    public Adventurer(int health, int attack) {
+    public Adventurer(String name, int health, int attack) {
+        this.name = name;
         this.health = this.currentHealth = health;
         this.attack = this.currentAttack = attack;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getHealth() {

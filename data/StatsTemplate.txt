@@ -1,8 +1,9 @@
+Name: 0
 Health: 0
 Current Health: 0
 Attack: 0
 Current Attack: 0
-Exp: 0
+Exp: 20
 Current Exp: 0
-Potions: 0
-Current Potions: 0
+Potions: 3
+Current Potions: 3
